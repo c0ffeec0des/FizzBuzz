@@ -2,16 +2,18 @@ package lab1;
 
 public class Multiples {
     public static void main(String[] args) {
-    int n = 0;
-        for (int i = 1; i < 1000; i++) {
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
+        // Test example
+        int count = multiples(1000, 3, 5);
+        System.out.println(count);
+    }
 
-            if (divisibleBy3 || divisibleBy5) {
-               n++;
+    public static int multiples(int n, int a, int b) {
+        int numOfMultiples = 0;
+        for (int i = 1; i < n; i++) {
+            if (i % a == 0 || i % b == 0) {
+                numOfMultiples++;
             }
-
         }
-        System.out.println(n);
+        return numOfMultiples;
     }
 }
